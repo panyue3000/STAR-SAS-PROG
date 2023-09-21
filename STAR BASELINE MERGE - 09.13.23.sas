@@ -2105,8 +2105,8 @@ table EPOSSCF*RVACSCF;
 run;
 
 data STBLOB_new;
-set STAR.STBLOB;
-else if SKPPSOB=1 or PLE_SOB=1 or BPDSPSOB=1 then IRR_MEN=1;
+set STAR.STBLOB;	
+	if SKPPSOB=1 or PLE_SOB=1 or BPDSPSOB=1 then IRR_MEN=1;
 else IRR_MEN=0;
 run;
 
